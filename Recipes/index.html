@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="jsondata" href="data.json" />
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="./img/logo.png" alt="logo">
+        </a>
+        <div class="navbar navbar-expand-lg ">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Explore</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Help</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li>
+                        <img src="./img/user.png" alt="user">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <img src="./img/banner.png" alt="banner" style="width: 100%;">
+        <div class="bottom-left" style="text-align: left; margin-left: 1rem;">
+            <div style="font-size: 17px; font-weight: 400; color: #DC582A;">Trending now</div>
+            <div style="font-size: 22px; font-weight: 900;">Mike's famous salad<br>with cheese</div>
+            <span style="font-size: 12px;">By John Mike</span>
+        </div>
+    </div>
+
+    <div class="search my-5">
+        <h2 style="font-size: 24px; margin-top: 1rem;">Search For Recipes</h2>
+        <nav class="navbar navbar-light bg-light">
+            <form class="form-inline" style="width: 100%;">
+                <div class="input-group form-search">
+                    <input class="form-control mr-sm-2" type="search" placeholder="&#128269;Search for recipes..."
+                        aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0 bg-success" type="submit" style="color: white;">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </form>
+        </nav>
+    </div>
+
+    <div class="category my-5">
+        <button type="button" class="btn" style="color: white; background-color: #EAAA00;">
+            All Recipes
+            <i class="fas fa-chevron-right m-3"></i>
+        </button>
+        <button type="button" class="btn" style="color: white; background-color: #C4D600;">
+            Veg Recipes Only
+            <i class="fas fa-chevron-right m-3"></i>
+        </button>
+        <button type="button" class="btn" style="color: white; background-color: #DC582A;">
+            Non Veg Recipes
+            <i class="fas fa-chevron-right m-3"></i>
+        </button>
+    </div>
+
+    <div class="all-recipes my-5">
+        <div class="all-recipes-left">
+            <div><h2 style="font-size: 24px; margin-bottom: 2rem;">Filters</h2></div>
+            <div>Rating</div>
+            <div>
+            <label>
+                <input type="checkbox" name="4 and Above" class="checkbox"> 4 and Above
+            </label>
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" name="Below 4" class="checkbox"> Below 4
+            </label>
+        </div>
+        </div>
+        <div class="all-recipes-right" id="recipe-container">
+            
+            <!-- <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="${recipe.imageSrc}" alt="${recipe.name}">
+                <div class="card-body">
+                    <div class="left-details">
+                        <div class="recipe-type">${recipe.type}</div>
+                        <div class="recipe-name">${recipe.name}</div>
+                        <div class="recipe-time">${recipe.time}</div>
+                    </div>
+                
+                    <div class="right-details">
+                        <div class="recipe-rating">Rating: ${recipe.rating}</div>
+                        <div class="like-button">
+                            ${recipe.isLiked ? '<i class="fas fa-heart"></i>' : '<i class="far fa-heart"></i>'}
+                        </div>
+                        <div class="comment-box">
+                        
+                            <i class="far fa-comment"></i>
+                        </div>
+                    </div>
+                </div>
+              </div> -->
+        </div>
+    </div>
+
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+<div class="contain-foot my-5">
+    <!-- Footer -->
+    <footer
+            class="text-center text-lg-start"
+            >
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Links -->
+        <section class="" style="color: #333333;">
+          <!--Grid row-->
+          <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <img src="./img/logo.png">
+              <p class="linkss">
+                Cookpal is a recipe website with a wide variety of delicious recipes, easy-to-use search function. Join our community and let's cook together!
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <hr class="w-100 clearfix d-md-none" />
+  
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Company</h6>
+              <p>
+                <a class="linkss">Home</a>
+              </p>
+              <p>
+                <a class="linkss">Explore</a>
+              </p>
+              <p>
+                <a class="linkss">Team</a>
+              </p>
+              <p>
+                <a class="linkss">About us</a>
+              </p>
+              <p>
+                <a class="linkss">Activity</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <hr class="w-100 clearfix d-md-none" />
+  
+            <!-- Grid column -->
+            <hr class="w-100 clearfix d-md-none" />
+  
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Resources</h6>
+              <p><a class="linkss">Blog</a></p>
+              <p> <a class="linkss">Use Cases</a></p>
+              <p> <a class="linkss">Testimonial</a></p>
+              <p> <a class="linkss">Insights</a></p>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <img src="./img/logo.png" alt="logo">
+                <div><span class="linkss">
+                    Ut risus mattis interdum faucibus facilisi. Facilisi purus accumsan aliquam.
+                </span></div>
+                <div class="input-group">
+                    <input type="search" class="form-control rounded email-input" placeholder="Your Email         @" aria-label="Search" aria-describedby="search-addon" />
+                    <button type="button" class="btn btn-outline-success text-white" style="background-color: #509E2F; margin-left: 5px;" data-mdb-ripple-init>Subscribe</button>
+                  </div>
+            </div>
+          </div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+      </div>
+      <!-- Grid container -->
+  
+      <!-- Copyright -->
+      <div
+           class="text-center mb-4 footer"
+           >
+          <!-- Instagram -->
+        <a
+        class="btn btn-floating m-1"
+        href="#!"
+        role="button"
+        ><i class="fab fa-instagram"></i
+       ></a>
+
+        <!-- Twitter -->
+        <a
+           class="btn btn-floating m-1"
+           href="#!"
+           role="button"
+           ><i class="fab fa-twitter"></i
+          ></a>
+
+        <!-- Linkedin -->
+        <a
+           class="btn btn-floating m-1"
+           href="#!"
+           role="button"
+           ><i class="fab fa-linkedin-in"></i
+          ></a>
+
+          <!-- facebook-->
+          <a
+           class="btn btn-floating m-1"
+           href="#!"
+           role="button"
+           ><i class="fab fa-facebook-f"></i
+          ></a>
+
+       </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </div>
+  <!-- End of .container -->
+
+  <script src="script.js">
+
+  </script>
+
+</body>
+
+</html>

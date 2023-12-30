@@ -1,0 +1,89 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0.5rem;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.bottom-left {
+    position: absolute;
+    align-items: center;
+    bottom: 20%;
+    left: 6%;
+}
+
+.logo-img {
+    max-width: 150px;
+    /* Adjust as needed */
+}
+
+.navbar-custom {
+    margin-left: auto;
+}
+
+@media (max-width: 767px) {
+    .navbar-custom {
+        margin-left: 0;
+        order: -1;
+        /* Push to the top on small screens */
+    }
+}
+
+.category {
+    margin-top: 1rem;
+}
+
+.all-recipes {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.all-recipes-left {
+    flex: 1;
+    padding: 20px;
+}
+
+.all-recipes-right {
+    flex: 3;
+    padding: 20px;
+}
+
+.email-input::placeholder {
+    text-align: right;
+    padding-right: 20px;
+    content: "\200B @";
+    /* Unicode character for zero-width space */
+}
+
+.linkss {
+    text-decoration: none;
+    color: gray;
+}
+.container-foot{
+    width: 100%;
+}
+
+.footer a.btn-floating {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: #ffff;
+    background-color: #1a1a20;
+}
+.checkbox{
+    color: green;
+}
+.checkbox:checked {
+    color: green;
+}
